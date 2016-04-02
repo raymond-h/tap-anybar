@@ -6,12 +6,14 @@
   "main": "lib/index.js",
   "author": "Raymond Hammarling",
   "repository": "raymond-h/tap-anybar",
+  "bin": {
+    "tap-anybar": "./lib/index.js"
+  },
   "scripts": {
     "lint": "eslint src/ test/",
     "test": "mocha --compilers js:babel-register,es6:babel-register,es6.js:babel-register test/",
     "build": "babel -d lib/ src/",
     "pretest": "npm run lint",
-    "prebuild": "npm run test",
     "watch": "onchange src/ -- npm run build && echo Done",
     "dev": "npm run watch",
     "prepublish": "npm run build"
@@ -26,5 +28,10 @@
     "eslint": "^2.5.1",
     "mocha": "^2.4.5",
     "onchange": "^2.2.0"
+  },
+  "dependencies": {
+    "anybar": "^2.0.1",
+    "minimist": "^1.2.0",
+    "tap-parser": "^1.2.2"
   }
 }
