@@ -5,7 +5,10 @@
   "license": "MIT",
   "main": "lib/index.js",
   "author": "Raymond Hammarling",
-  "repository": "raymond-h/tap-anybar",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/raymond-h/tap-anybar"
+  },
   "bin": {
     "tap-anybar": "./lib/index.js"
   },
